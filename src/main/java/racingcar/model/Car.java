@@ -27,8 +27,15 @@ public class Car {
         } catch (IOException e) {
             throw new IllegalArgumentException(e);
         }
+
+        System.out.println(carName);
         return carName;
     }
+
+    public List<String> getCarName() {
+        return carName;
+    }
+
 }
 
 
