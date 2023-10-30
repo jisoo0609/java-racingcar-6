@@ -1,4 +1,4 @@
-package racingcar;
+package racingcar.model;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,9 +6,9 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CarName {
-    public String inputCarName;
-    List<String> carName = new ArrayList<>();
+public class Car {
+    private String inputCarName;
+    private List<String> carName = new ArrayList<>();
 
     public List<String> input() { // 사용자에게 자동차 이름 입력받아 저장
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
