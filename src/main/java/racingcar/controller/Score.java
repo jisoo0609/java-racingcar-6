@@ -1,7 +1,5 @@
 package racingcar.controller;
 
-import racingcar.model.Car;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,7 +10,7 @@ public class Score { //count만큼 시행했을때 누가 가장 많이 갔는�
         RandomValue randomValue = new RandomValue();
         List<Integer> random = randomValue.random(car);
 
-        for (int i = 0; i < random.size(); i++) { // score 크기 random과 같게 초기화
+        for (int i = 0; i < car.size(); i++) { // score 크기 random과 같게 초기화
             score.add(0);
         }
 
