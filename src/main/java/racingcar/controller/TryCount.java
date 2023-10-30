@@ -1,4 +1,4 @@
-package racingcar.model;
+package racingcar.controller;
 
 import camp.nextstep.edu.missionutils.Console;
 
@@ -14,9 +14,6 @@ public class TryCount {
         } catch (NumberFormatException e) {
             throw new IllegalArgumentException();
         }
-
-        System.out.println("count: "+count);
-
         return count;
     }
 
