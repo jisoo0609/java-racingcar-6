@@ -3,7 +3,7 @@ package racingcar.domain;
 // 자동차 객체
 public class Car {
     private final String name;
-    private int positon = 0;
+    private int position = 0;
 
     public Car(String name) {
         validateName(name);
@@ -19,12 +19,12 @@ public class Car {
     // 전진
     public void move(int randomNumber) {
         if (randomNumber >= 4) {
-            positon++;
+            position++;
         }
     }
 
-    public int getPositon() {
-        return positon;
+    public int getPosition() {
+        return position;
     }
 
     public String getName() {
@@ -33,6 +33,6 @@ public class Car {
 
     @Override
     public String toString() {
-        return name + " : " + "-".repeat(positon);
+        return name + " : " + "-".repeat(position);
     }
 }
