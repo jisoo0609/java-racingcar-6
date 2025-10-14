@@ -27,5 +27,29 @@ public class RacingGame {
         }
     }
 
+    // 전체 경기 실행
+    public void play() {
+        System.out.println("실행 결과");
+
+        for (int i = 0; i < tryConut; i++) {
+            playRound();
+            for (Car car : cars) {
+               System.out.println(car);
+            }
+            System.out.println();
+        }
+    }
+
+    // 한 라운드 실행
+    public void playRound() {
+
+    }
+
+/*
+    // 우승자 리스트 반환
+    public List<Car> getWinner() {
+
+    }
+*/
 
 }
