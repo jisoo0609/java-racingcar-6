@@ -3,6 +3,7 @@ package racingcar.domain;
 import racingcar.util.RandomUtils;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 // 자동차들을 관리하고 라운드 실행
 public class RacingGame {
@@ -50,11 +51,22 @@ public class RacingGame {
         }
     }
 
-/*
     // 우승자 리스트 반환
     public List<Car> getWinner() {
+        int max = cars.stream()
+                .mapToInt(Car::getPositon)
+                .max()
+                .orElse(0);
 
+        return cars.stream()
+                .filter(car -> car.getPositon() == max)
+                .collect(Collectors.toList());
     }
-*/
+
+    public String getWinnerName() {
+        return getWinner().stream()
+                .map(Car::getName)
+                .collect(Collectors.joining(","));
+    }
 
 }

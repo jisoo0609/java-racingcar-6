@@ -48,7 +48,7 @@ getWinners() → 우승자 리스트 반환
 ```java
 public class RandomUtils {
     public static int getRandomNumber() {
-    return (int) (Math.random() * 10);
+        return (int) (Math.random() * 10);
     }
 }
 ```
