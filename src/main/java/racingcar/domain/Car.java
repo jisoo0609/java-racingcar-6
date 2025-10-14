@@ -16,5 +16,23 @@ public class Car {
         }
     }
 
+    // 전진
+    public void move(int randomNumber) {
+        if (randomNumber >= 4) {
+            positon++;
+        }
+    }
 
+    public int getPositon() {
+        return positon;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public String toString() {
+        return name + " : " + "-".repeat(positon);
+    }
 }
