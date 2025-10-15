@@ -5,9 +5,7 @@ import racingcar.domain.Car;
 import racingcar.domain.RacingGame;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Application {
     public static void main(String[] args) {
@@ -21,7 +19,7 @@ public class Application {
         for (String name : carNames) {
             String trimmedName = name.trim();
 
-            if (!trimmedName.isEmpty()) {
+            if (trimmedName.isEmpty()) {
                 throw new IllegalArgumentException("자동차 이름은 비워둘 수 없습니다.");
             }
             cars.add(new Car(trimmedName));
@@ -32,8 +30,12 @@ public class Application {
         int tryCount = Integer.parseInt(Console.readLine());
 
         // 3. 게임 실행
-
+        RacingGame racingGame = new RacingGame(cars, tryCount);
+        racingGame.play();
 
         // 4. 최종 우승자 출력
+        System.out.println("최종 우승자 : "+ racingGame.getWinnersName());
+
+        Console.close();
     }
 }
