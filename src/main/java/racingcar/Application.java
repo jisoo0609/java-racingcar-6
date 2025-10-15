@@ -11,19 +11,7 @@ public class Application {
     public static void main(String[] args) {
         // 1. 자동차 이름 입력
         System.out.println("경주할 자동차 이름을 입력하세요. (이름은 쉼표(,)로 구분)");
-        String nameInput = Console.readLine();
-
-        String[] carNames = nameInput.split(",");
-        List<Car> cars = new ArrayList<>();
-
-        for (String name : carNames) {
-            String trimmedName = name.trim();
-
-            if (trimmedName.isEmpty()) {
-                throw new IllegalArgumentException("자동차 이름은 비워둘 수 없습니다.");
-            }
-            cars.add(new Car(trimmedName));
-        }
+        List<Car> cars = createCars(Console.readLine());
 
         // 2. 시도 횟수 입력
         System.out.println("시도할 회수는 몇 회인가요?");
@@ -34,8 +22,30 @@ public class Application {
         racingGame.play();
 
         // 4. 최종 우승자 출력
-        System.out.println("최종 우승자 : "+ racingGame.getWinnersName());
+        System.out.println("최종 우승자 : " + racingGame.getWinnersName());
 
         Console.close();
+    }
+
+    /**
+     * 주어진 이름 배열로 자동차 리스트를 생성합니다.
+     * 이름이 비어있거나 5자를 초과하면 예외를 던집니다.
+     *
+     * @param input
+     * @return 자동차 리스트
+     * @throws IllegalArgumentException 이름이 유효하지 않을 경우
+     */
+    private static List<Car> createCars(String input) {
+        String[] names = input.split(",");
+        List<Car> cars = new ArrayList<>();
+
+        for (String name : names) {
+            String trimmedName = name.trim();
+            if (trimmedName.isEmpty()) {
+                throw new IllegalArgumentException("자동차 이름은 비워둘 수 없습니다.");
+            }
+            cars.add(new Car(trimmedName));
+        }
+        return cars;
     }
 }
