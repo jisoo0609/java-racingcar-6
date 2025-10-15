@@ -10,13 +10,12 @@ public class RacingGame {
     private final List<Car> cars;
     private final int tryCount;
 
-    public RacingGame(List<Car> cars, int tryConut) {
+    public RacingGame(List<Car> cars, int tryCount) {
         validateCars(cars);
-
-        validateTryCount(tryConut);
+        validateTryCount(tryCount);
 
         this.cars = cars;
-        this.tryCount = tryConut;
+        this.tryCount = tryCount;
     }
 
     private void validateCars(List<Car> cars) {
