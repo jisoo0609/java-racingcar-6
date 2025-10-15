@@ -94,8 +94,8 @@ jun : ---
 - `RacingGame.getWinners()` → 여러 명이 같은 거리일 때 쉼표 구분 출력하는지
 - 입력 검증 → 잘못된 입력 시 예외 발생하는지
 
-#### `ApplicationTest.java`
-[ApplicationTestResultImg](/src/main/resources/static/img/ApplicationTestResult.png)
+🧩 `ApplicationTest.java`
+![ApplicationTestResultImg](/src/main/resources/static/img/ApplicationTestResult.png)
 
-#### 'StringTest.java'
-[StringTestResultImg](/src/main/resources/static/img/StringTestResultImg.png)
+🧩 `StringTest.java`
+![StringTestResultImg](/src/main/resources/static/img/StringTestResultImg.png)
